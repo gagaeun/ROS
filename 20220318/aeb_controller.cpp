@@ -6,7 +6,6 @@
 #include "sensor_msgs/Range.h"
 
 std_msgs::Bool flag_AEB;
-
 geometry_msgs::Twist cmd_vel_msg;
 
 
@@ -31,7 +30,6 @@ void CarControlCallback(const geometry_msgs::Twist& msg)
 	ROS_INFO("Cmd_vel : linear_x [%f]", msg.linear.x);
 	
 	cmd_vel_msg = msg;
-	//ROS_INFO("Cmd_vel : linear_x [%f]", cmd_vel_msg.linear.x);
 }
 
 void UltraSonarCallback2(const sensor_msgs::Range::ConstPtr& msg)
